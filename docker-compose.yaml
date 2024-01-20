@@ -1,0 +1,11 @@
+version: '3'
+services:
+  autotest:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./test_results:/tests_project/test_results
+      - ./logs:/tests_project/logs
+    ports:
+      - 5050:5050
